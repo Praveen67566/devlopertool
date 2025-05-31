@@ -20,7 +20,7 @@ app.set("view engine","ejs");
 app.set("views",path.resolve('./views'))
 
 //for routers
-app.use('/auth',authRouter);
+app.use('/',authRouter);
 app.use('/',dashboardRouter);
 
 async function connecting(){
