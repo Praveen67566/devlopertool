@@ -5,6 +5,7 @@ import { authRouter } from "./Routers/authRouter.js";
 import ejs from "ejs";
 import path from "path"
 import { dashboardRouter } from "./Routers/dashboardRouter.js";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ const app = express();
 //some configurations
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+app.use(cookieParser());
 
 //ejs configuration for ssr-->(server side rendering)
 

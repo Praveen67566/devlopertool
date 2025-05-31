@@ -8,5 +8,5 @@ authRouter.get('/register',(req,res)=>{
     res.render('register');
 })
 authRouter.get('/login',(req,res)=>{
-    
+    res.render('login')
 })

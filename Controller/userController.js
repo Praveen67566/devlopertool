@@ -63,7 +63,10 @@ export const login = async (req,res)=>{
 
         const token = settoken(user);
 
-        res.status(200).json({message:"Login successfull",user:user,token:token})
+       res.cookie('token', token);
+       return res.redirect('/home',{
+        user
+       });
 
     } catch (error) {
         console.log(error)
